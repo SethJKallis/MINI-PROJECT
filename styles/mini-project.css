@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: papayawhip;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-main-container{
+    border: 3px double cyan;
+}
+
+.header{
+    border-bottom: 2px solid #000;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    gap: 0.5em;
+}
+
+
+.image-container{
+    /* border: 2px solid gold; */
+    width: 100%;
+}
+
+img{
+    object-fit: cover;
+    width: 10rem;
+
+    border-radius: 50%;
+}
+
+/* .menu-container{
+    border: 2px solid red;
+} */
+
+.menu-list{
+    /* border: 2px solid saddlebrown; */
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* .menu-list .menu-item{
+    border: 2px solid goldenrod;
+} */
+
+.menu-list li a:any-link{
+    /* border: 3px solid blue; */
+    color: #000;
+    text-decoration: none;
+    transition: all 0.5s ease 0.1s;
+}
+
+.menu-list li a:hover,
+.menu-list li a:focus{
+    color: darkturquoise;
+    font-size: 1.75em;
+}
+
+.heading-one{
+    margin-top: 0.25em;
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease 0.1s;
+}
+
+.heading-one:hover{
+    color: turquoise;
+}
+
+img{
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+}
+
+img:hover{
+    animation: rotate 5s normal 0s infinite forwards;
+}
+
+.home{
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    animation: colorize 0.5s ease 0s infinite alternate both;
+}
+
+footer{
+    border: 2px solid #000;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    animation: footer-mover 2s ease 0s infinite alternate both;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes colorize {
+    0%{
+        color: #000;
+    }
+    
+    100%{
+        color: darkturquoise;
+    }
+}
+
+@keyframes footer-mover {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(87vw);
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .header{
+        display: none;
+    }
+}
